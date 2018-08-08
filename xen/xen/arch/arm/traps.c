@@ -120,7 +120,8 @@ custom_param("vwfi", parse_vwfi);
 register_t get_default_hcr_flags(void)
 {
     return  (HCR_PTW|HCR_BSU_INNER|HCR_AMO|HCR_IMO|HCR_FMO|HCR_VM|
-             (vwfi != NATIVE ? (HCR_TWI|HCR_TWE) : 0) |
+//             (vwfi != NATIVE ? (HCR_TWI|HCR_TWE) : 0) |
+	     0 |
              HCR_TSC|HCR_TAC|HCR_SWIO|HCR_TIDCP|HCR_FB);
 }
 
